@@ -93,8 +93,11 @@ opt_einsum==3.4.0
 packaging==20.9
 pamqp==3.2.1
 partd==1.4.2
+pdfminer.six==20250506
+pdfplumber==0.11.7
 pillow==12.0.0
 pluggy==1.6.0
+plum-dispatch==1.7.4
 portalocker==2.10.1
 prompt-toolkit==3.0.28
 propcache==0.4.1
@@ -109,6 +112,7 @@ PyJWT==2.10.1
 pykwalify==1.8.0
 pymongo==4.3.3
 pyparsing==3.2.5
+pypdfium2==5.0.0
 pyrsistent==0.20.0
 python-crfsuite==0.9.11
 python-dateutil==2.8.2
@@ -145,6 +149,7 @@ six==1.17.0
 sklearn-crfsuite==0.3.6
 skops==0.9.0
 slack_sdk==3.37.0
+spire-pdf==11.9.2
 SQLAlchemy==1.4.54
 structlog==23.3.0
 structlog-sentry==2.1.0
