@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: action_respond_bot_inquiry
+
+- rule: Respond to any inquiries on admission
+  steps:
+    - intent: admission_inquiry
+    - action: action_respond_admission_inquiry
