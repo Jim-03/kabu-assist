@@ -25,3 +25,8 @@ dist-ssr
 
 # Python environment
 chatbot-core/.venv
+chatbot-core/models
+chatbot-core/.rasa
+
+# Environment variables
+.env
