@@ -8,9 +8,11 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - admission_inquiry
 
 actions:
   - action_respond_bot_inquiry
+  - action_respond_admission_inquiry
 
 responses:
   utter_greet:

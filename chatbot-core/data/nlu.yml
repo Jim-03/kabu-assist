@@ -97,3 +97,19 @@ nlu:
     - what are you?
     - are you a person?
     - is there a real person behind this?
+
+- intent: admission_inquiry
+  examples: |
+    - When does the application period open?
+    - How do I apply for a postgraduate degree?
+    - Is there an application fee and how much is it?
+    - What documents do I need to submit with my application?
+    - Do you offer scholarships for international students?
+    - What is the deadline for scholarship applications?
+    - Can I apply for multiple programs at the same time?
+    - I need information about the admission process.
+    - How can I check the status of my application?
+    - Do you accept transfer students from other universities?
+    - When is the next intake?
+    - Do you have September intake?
+    - What is the mean grade for the undergraduate programme?
