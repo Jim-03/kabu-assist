@@ -16,3 +16,8 @@ rules:
   steps:
     - intent: admission_inquiry
     - action: action_respond_admission_inquiry
+
+- rule: Respond to any student life inquiry
+  steps:
+    - intent: student_life
+    - action: action_respond_student_life
