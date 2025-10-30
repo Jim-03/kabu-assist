@@ -9,10 +9,12 @@ intents:
   - mood_unhappy
   - bot_challenge
   - admission_inquiry
+  - student_life
 
 actions:
   - action_respond_bot_inquiry
   - action_respond_admission_inquiry
+  - action_respond_student_life
 
 responses:
   utter_greet:

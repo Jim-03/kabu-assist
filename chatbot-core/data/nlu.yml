@@ -113,3 +113,24 @@ nlu:
     - When is the next intake?
     - Do you have September intake?
     - What is the mean grade for the undergraduate programme?
+
+- intent: student_life
+  examples: |
+    - What is campus life like?
+    - Tell me about the student clubs and societies.
+    - Are there on-campus housing options?
+    - What sports facilities are available?
+    - How is the food in the campus cafeteria?
+    - What kind of student events are organized throughout the year?
+    - Is there a gym for students?
+    - Can you tell me about the library services?
+    - What support services are available for students?
+    - Are there opportunities for volunteering?
+    - How diverse is the student population?
+    - What are the options for part-time jobs on campus?
+    - Is there a student health center?
+    - What is the social scene like on campus?
+    - Are there any mentorship programs for freshmen?
+    - Describe life in Kabarak University
+    - What accommodation options are offered?
+    - What are some of the recreation facilities offered?
