@@ -1,9 +1,11 @@
+from pathlib import Path
+
 import chromadb
 import pdfplumber
 from pdfplumber.page import Page
 from sentence_transformers import SentenceTransformer
 
-full_time_path = "../storage/full_time_programs.pdf"
+full_time_path = str(Path(__file__).parent.parent / "storage/full_time_programs.pdf")
 schools = []
 programmes: list[dict] = []
 
@@ -122,7 +124,7 @@ for p in programmes:
 model = SentenceTransformer("sentence-transformers/All-MiniLM-L6-V2")
 embeddings = model.encode(chunks, convert_to_tensor=True).tolist()
 
-client = chromadb.PersistentClient(path="../storage/chromadb")
+client = chromadb.PersistentClient(path=str(Path(__file__).parent.parent / "storage/chromadb"))
 collection = client.get_or_create_collection(name="full_time_programmes")
 ids = [f"programme_{course_id}" for course_id in range(len(chunks))]
 
