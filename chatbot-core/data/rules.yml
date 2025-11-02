@@ -21,3 +21,8 @@ rules:
   steps:
     - intent: student_life
     - action: action_respond_student_life
+
+- rule: Respond to any full time course inquiry
+  steps:
+    - intent: full_time_inquiry
+    - action: action_respond_full_time_inquiry
