@@ -10,11 +10,13 @@ intents:
   - bot_challenge
   - admission_inquiry
   - student_life
+  - full_time_inquiry
 
 actions:
   - action_respond_bot_inquiry
   - action_respond_admission_inquiry
   - action_respond_student_life
+  - action_respond_full_time_inquiry
 
 responses:
   utter_greet:

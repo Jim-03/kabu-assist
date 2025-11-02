@@ -134,3 +134,24 @@ nlu:
     - Describe life in Kabarak University
     - What accommodation options are offered?
     - What are some of the recreation facilities offered?
+
+- intent: full_time_inquiry
+  examples: |
+    - What are the minimum requirements for the computer science course?
+    - Can I join diploma in banking and finance with a KCSE grade of C+?
+    - What are the fee requirements for information technology course?
+    - What are some courses I can do from the school of science, engineering and technology?
+    - Can I do law if I scored A in Kiswahili?
+    - Do you have a course for Master of Science in Human Nutrition and Dietetics?
+    - Describe some of the courses found in the school of law
+    - What programmes do you offer?
+    - Tell me about your undergraduate degrees.
+    - Do you have a Master's in Data Science?
+    - I'm interested in engineering courses.
+    - List your business programs.
+    - What are the available courses for postgraduate studies?
+    - Can you send me a list of all your majors?
+    - Is there a programme in Biomedical Engineering?
+    - Are there any diploma programmes in Digital Marketing?
+    - What are the different specializations in the MBA program?
+    - Show me the programmes in the Faculty of Arts.
