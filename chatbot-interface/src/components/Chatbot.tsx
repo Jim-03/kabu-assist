@@ -18,10 +18,24 @@ export default function Chatbot() {
     const params = new URLSearchParams();
     params.set('userId', '1');
 
-    fetch(`http://localhost:8080/chat/all?${params.toString()}`)
+    fetch(`http://localhost:5005/conversations/test_user/tracker`)
       .then(response => response.json())
       .then(data => {
-        setChats(data.chats);
+          const messages: {prompt: string, response: string}[] = []
+          let currentPrompt: null | string;
+
+          data.events.forEach(event => {
+              if (event.event === 'user') {
+                  currentPrompt = event.text;
+              } else if (event.event === 'bot' && currentPrompt) {
+                  messages.push({
+                      prompt: currentPrompt,
+                      response: event.text
+                  });
+                  currentPrompt = null;
+              }
+          });
+          setChats(messages);
       });
   }, []);
 
