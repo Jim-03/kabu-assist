@@ -40,7 +40,7 @@ def generate_response(system_instruction: str, user_prompt: str) -> str:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
 
     try:
-        response = requests.post(url, headers={'Content-Type': 'application/json'}, data=json.dumps(payload))
+        response = requests.post(url, headers={'Content-Type': 'application/json'}, data=json.dumps(payload), timeout=20)
 
         if response.status_code == 200:
             data = response.json()
