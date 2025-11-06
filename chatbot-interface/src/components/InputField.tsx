@@ -31,21 +31,27 @@ export default function InputField({animation, addChat, previousChats}: InputFie
     animation(true);
     setPromptText('');
 
-    fetch('http://localhost:8080/chat/', {
+    fetch('http://localhost:5005/webhooks/rest/webhook', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        user_id: 1,
+        sender: "test_user",
         message: currentPrompt
       })
     })
       .then((response) => response.json())
       .then((data) => {
+        const responses: string[] = []
+
+        data.forEach(response => {
+          responses.push(response.text)
+        })
+
         addChat((prev) => {
           const updated = [...prev];
           updated[updated.length - 1] = {
             ...updated[updated.length - 1],
-            response: data.message.join('\n')
+            response: responses.join('\n\n')
           };
           return updated;
         });
