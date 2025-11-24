@@ -125,6 +125,14 @@ model = SentenceTransformer("sentence-transformers/All-MiniLM-L6-V2")
 embeddings = model.encode(chunks, convert_to_tensor=True).tolist()
 
 client = chromadb.PersistentClient(path=str(Path(__file__).parent.parent / "storage/chromadb"))
+
+# Remove collection if it exists to avoid duplications
+try:
+  client.delete_collection(name="full_time_programmes")
+  print("Removed existing collection")
+except Exception:
+  pass
+
 collection = client.get_or_create_collection(name="full_time_programmes")
 ids = [f"programme_{course_id}" for course_id in range(len(chunks))]
 
