@@ -26,3 +26,8 @@ rules:
   steps:
     - intent: full_time_inquiry
     - action: action_respond_full_time_inquiry
+
+- rule: Respond to the user when provided with a follow up response
+  steps:
+    - intent: follow_up_responses
+    - action: action_respond_follow_up

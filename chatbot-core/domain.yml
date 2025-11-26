@@ -3,8 +3,7 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
+  - follow_up_responses
   - mood_great
   - mood_unhappy
   - bot_challenge
@@ -17,6 +16,7 @@ actions:
   - action_respond_admission_inquiry
   - action_respond_student_life
   - action_respond_full_time_inquiry
+  - action_respond_follow_up
 
 responses:
   utter_greet:
