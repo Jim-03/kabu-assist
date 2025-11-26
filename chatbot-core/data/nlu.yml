@@ -30,7 +30,7 @@ nlu:
     - bye bye
     - see you later
 
-- intent: affirm
+- intent: follow_up_responses
   examples: |
     - yes
     - y
@@ -38,9 +38,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
-- intent: deny
-  examples: |
     - no
     - n
     - never
@@ -48,6 +45,13 @@ nlu:
     - don't like that
     - no way
     - not really
+    - any other?
+    - where?
+    - why?
+    - who?
+    - when?
+    - and?
+    - more please
 
 - intent: mood_great
   examples: |
