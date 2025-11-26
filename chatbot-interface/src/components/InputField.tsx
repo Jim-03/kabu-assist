@@ -10,6 +10,10 @@ interface InputFieldProps {
   previousChats: {prompt: string; response: string|null}[]
 }
 
+interface BotResponse {
+  text: string
+}
+
 /**
  * Component that renders the input field in the chatbot's interface
  * @param animation A function that controls the display of thinking animation
@@ -43,7 +47,7 @@ export default function InputField({animation, addChat, previousChats}: InputFie
       .then((data) => {
         const responses: string[] = []
 
-        data.forEach(response => {
+        data.forEach((response: BotResponse) => {
           responses.push(response.text)
         })
 

@@ -5,6 +5,11 @@ import ReactMarkdown from 'react-markdown';
 import { FaSpinner } from 'react-icons/fa';
 import { RiRobot3Fill } from 'react-icons/ri';
 
+interface RasaEvent {
+  event: string,
+  text: string
+}
+
 /**
  * Component that renders the chatbot interface
  */
@@ -24,7 +29,7 @@ export default function Chatbot() {
           const messages: {prompt: string, response: string}[] = []
           let currentPrompt: null | string;
 
-          data.events.forEach(event => {
+          data.events.forEach((event: RasaEvent) => {
               if (event.event === 'user') {
                   currentPrompt = event.text;
               } else if (event.event === 'bot' && currentPrompt) {
