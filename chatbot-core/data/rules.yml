@@ -41,3 +41,8 @@ rules:
   steps:
     - intent: contacts
     - action: action_respond_contact_inquiry
+
+- rule: Respond to greetings
+  steps:
+    - intent: greet
+    - action: action_greet

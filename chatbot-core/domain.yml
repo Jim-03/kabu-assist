@@ -21,6 +21,7 @@ actions:
   - action_respond_follow_up
   - action_respond_banking_details
   - action_respond_contact_inquiry
+  - action_greet
 
 responses:
   utter_goodbye:
