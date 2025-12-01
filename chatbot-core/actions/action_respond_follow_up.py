@@ -3,6 +3,7 @@ from rasa.shared.core.domain import Domain
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from scripts.generate_response import generate_response
+from .generate_response import generate_response
 
 
 class ActionRespondFollowUp(Action):

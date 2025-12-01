@@ -5,7 +5,7 @@ import chromadb
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
-from scripts.generate_response import generate_response
+from .generate_response import generate_response
 from sentence_transformers import SentenceTransformer
 
 
