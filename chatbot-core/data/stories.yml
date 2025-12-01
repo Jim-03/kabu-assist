@@ -2,29 +2,69 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: prospective student admissions path
+    steps:
+      - intent: greet
+      - action: action_greet
+      - intent: admission_inquiry
+      - action: action_respond_admission_inquiry
+      - intent: follow_up_responses
+      - action: action_respond_follow_up
+      - intent: goodbye
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: direct admission inquiry
+    steps:
+      - intent: admission_inquiry
+      - action: action_respond_admission_inquiry
+      - intent: full_time_inquiry
+      - action: action_respond_full_time_inquiry
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: student life and facilities
+    steps:
+      - intent: greet
+      - action: action_greet
+      - intent: student_life
+      - action: action_respond_student_life
+      - intent: mood_great
+      - action: action_greet  # Re-using greet or a generic positive acknowledgment
+
+  - story: banking and fees inquiry
+    steps:
+      - intent: bank_inquiry
+      - action: action_respond_banking_details
+      - intent: follow_up_responses
+      - action: action_respond_follow_up
+      - intent: contacts
+      - action: action_respond_contact_inquiry
+
+  - story: full time program inquiry with contacts
+    steps:
+      - intent: full_time_inquiry
+      - action: action_respond_full_time_inquiry
+      - intent: contacts
+      - action: action_respond_contact_inquiry
+
+  - story: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: action_respond_bot_inquiry
+
+  - story: handling out of topic questions
+    steps:
+      - intent: out_of_topic
+      - action: action_out_of_topic
+      - intent: admission_inquiry
+      - action: action_respond_admission_inquiry
+
+  - story: sad student path
+    steps:
+      - intent: mood_unhappy
+      - action: action_respond_student_life
+      - intent: goodbye
+
+  - story: simple contact lookup
+    steps:
+      - intent: greet
+      - action: action_greet
+      - intent: contacts
+      - action: action_respond_contact_inquiry
