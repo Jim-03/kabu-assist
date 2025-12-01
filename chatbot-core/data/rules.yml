@@ -46,3 +46,8 @@ rules:
   steps:
     - intent: greet
     - action: action_greet
+
+- rule: Respond to out of topic inquiries
+  steps:
+    - intent: out_of_topic
+    - action: action_out_of_topic

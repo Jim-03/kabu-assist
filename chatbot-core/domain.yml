@@ -12,6 +12,7 @@ intents:
   - full_time_inquiry
   - bank_inquiry
   - contacts
+  - out_of_topic
 
 actions:
   - action_respond_bot_inquiry
@@ -22,6 +23,7 @@ actions:
   - action_respond_banking_details
   - action_respond_contact_inquiry
   - action_greet
+  - action_out_of_topic
 
 responses:
   utter_goodbye:

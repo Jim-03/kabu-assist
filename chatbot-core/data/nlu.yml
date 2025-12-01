@@ -201,3 +201,31 @@ nlu:
     - Can you give me the email for the head of the department?
     - Who is the contact person for final year projects?
     - I need the fax number for the administration building.
+
+- intent: out_of_topic
+  examples: |
+    - What is the time?
+    - Between Arsenal and Manchester United, which would you pick?
+    - What's your favorite movie?
+    - Which is the best phone in the current year?
+    - Where is the nearest hotel?
+    - How do you make a perfect omelette?
+    - What is the capital of Iceland?
+    - Can you tell me a joke?
+    - What's the meaning of life?
+    - Do you believe in aliens?
+    - What's the weather like today?
+    - Recommend a good book to read.
+    - How many planets are in the solar system?
+    - What should I have for dinner?
+    - Can you speak Spanish?
+    - Who won the last FIFA World Cup?
+    - What's the fastest animal on Earth?
+    - Teach me how to meditate.
+    - What are the symptoms of a common cold?
+    - Do you have any hobbies?
+    - What is the square root of 144?
+    - Who is your favorite celebrity?
+    - Can you write a short poem?
+    - What's the best way to learn guitar?
+    - Should I invest in cryptocurrency?
