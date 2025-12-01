@@ -178,3 +178,26 @@ nlu:
     - I need the university's beneficiary name and account number.
     - How to pay my fees via bank?
     - What is the procedure for fee payment through bank transfer?
+
+- intent: contacts
+  examples: |
+    - How can I contact the admissions office?
+    - What is the phone number for the registrar?
+    - I need the email address for the finance department.
+    - Where is the student support office located?
+    - Can I have the contact details for the library?
+    - Who do I talk to about my scholarship?
+    - Give me the contact information for the IT helpdesk.
+    - What's the email for the engineering faculty?
+    - How do I get in touch with my academic advisor?
+    - I need to speak to someone in student affairs.
+    - What is the main telephone number for the university?
+    - Where can I find the contact for the housing office?
+    - Please provide the details for the international student office.
+    - Is there a contact number for campus security?
+    - How do I reach the department of [Computer Science]?
+    - I lost my ID card, who should I contact?
+    - What's the address for the main campus?
+    - Can you give me the email for the head of the department?
+    - Who is the contact person for final year projects?
+    - I need the fax number for the administration building.

@@ -36,3 +36,8 @@ rules:
   steps:
     - intent: bank_inquiry
     - action: action_respond_banking_details
+
+- rule: Respond to any contact inquiry
+  steps:
+    - intent: contacts
+    - action: action_respond_contact_inquiry

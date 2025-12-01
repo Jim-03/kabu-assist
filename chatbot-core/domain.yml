@@ -11,6 +11,7 @@ intents:
   - student_life
   - full_time_inquiry
   - bank_inquiry
+  - contacts
 
 actions:
   - action_respond_bot_inquiry
@@ -19,6 +20,7 @@ actions:
   - action_respond_full_time_inquiry
   - action_respond_follow_up
   - action_respond_banking_details
+  - action_respond_contact_inquiry
 
 responses:
   utter_greet:
