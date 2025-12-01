@@ -31,3 +31,8 @@ rules:
   steps:
     - intent: follow_up_responses
     - action: action_respond_follow_up
+
+- rule: Respond to bank inquiry
+  steps:
+    - intent: bank_inquiry
+    - action: action_respond_banking_details

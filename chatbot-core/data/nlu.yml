@@ -159,3 +159,22 @@ nlu:
     - Are there any diploma programmes in Digital Marketing?
     - What are the different specializations in the MBA program?
     - Show me the programmes in the Faculty of Arts.
+
+- intent: bank_inquiry
+  examples: |
+    - What are the bank accounts for paying fees?
+    - What are the bank accounts for paying fees?
+    - How can I pay my tuition fees?
+    - Where can I find the bank details for fee payment?
+    - I need the university's bank account information.
+    - What are the payment details for the acceptance fee?
+    - Please provide the bank details for hostel fees.
+    - How do I make a bank transfer for my fees?
+    - What is the account number for fee deposits?
+    - I need to pay my fees, what are the banking details?
+    - Can you give me the bank name and account number for payments?
+    - Where should I transfer the money for my semester fees?
+    - What are the details for online bank transfer?
+    - I need the university's beneficiary name and account number.
+    - How to pay my fees via bank?
+    - What is the procedure for fee payment through bank transfer?
