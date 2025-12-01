@@ -28,6 +28,7 @@ chatbot-core/.venv
 chatbot-core/models
 chatbot-core/.rasa
 chatbot-core/storage/chromadb
+chatbot-core/results
 
 # Environment variables
 .env
