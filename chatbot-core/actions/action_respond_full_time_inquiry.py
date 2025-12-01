@@ -7,6 +7,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 from .generate_response import generate_response
 from sentence_transformers import SentenceTransformer
+from .chats import last_5_chats
 
 
 class ActionRespondFullTimeInquiry(Action):
@@ -30,6 +31,7 @@ class ActionRespondFullTimeInquiry(Action):
         You are a helpful university assistant to Kabarak University.
         Rasa has identified an intent where the user inquires about full time programs
         **CONTEXT**{result}
+        **Last 5 chats:** {last_5_chats(tracker)}
         The attached content is what could be found in the database
         Respond to the user
         
@@ -38,7 +40,8 @@ class ActionRespondFullTimeInquiry(Action):
         2. Respond in markdown format i.e. headings, bold text, bullets e.t.c. 
         3. Do not generate any data that isn't listed in the context
         4. You can also refer the user to the offices in case of more inquiry
-        5. Make your responses short and concise 
+        5. Make your responses short and concise
+        6. Follow basic conversation logic based on the last 5 chats if provided
         """
 
         response = generate_response(system_prompt, user_prompt)

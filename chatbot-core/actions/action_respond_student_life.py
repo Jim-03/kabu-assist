@@ -4,6 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 from .generate_response import generate_response
+from .chats import last_5_chats
 
 
 class ActionRespondStudentLife(Action):
@@ -14,10 +15,12 @@ class ActionRespondStudentLife(Action):
     def run(self, dispatcher: "CollectingDispatcher", tracker: Tracker, domain: "DomainDict", ) -> List[
         Dict[Text, Any]]:
         user_prompt = tracker.latest_message.get("text", None)
-        system_prompt = """
+        system_prompt = f"""
         You are a helpful university assistant to Kabarak university.
         Rasa has identified the intent 'student_life' which involves queries about life in Kabarak university.
         Respond to the user's inquiry
+        
+        **Last 5 chats:** {last_5_chats(tracker)}
         
         **WEBSITES TO REFER TO**
         - campus_life: https://kabarak.ac.ke/campus-life
@@ -38,6 +41,7 @@ class ActionRespondStudentLife(Action):
         5. Inform the user in case you don't know the response to the prompt
         6. Visit the provided links first before responding to the user
         7. You can refer the user to the appropriate link provided above. The default link is https://kabarak.ac.ke/campus-life
+        8. Follow basic conversation logic based on the last 5 chats if provided 
         """
 
         response = generate_response(system_prompt, user_prompt)

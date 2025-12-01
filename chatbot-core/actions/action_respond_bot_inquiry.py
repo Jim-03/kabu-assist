@@ -4,6 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 from .generate_response import generate_response
+from .chats import last_5_chats
 
 
 class ActionRespondBotInquiry(Action):
@@ -15,15 +16,17 @@ class ActionRespondBotInquiry(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict, ) -> List[
         Dict[Text, Any]]:
         user_prompt = tracker.latest_message.get("text", None)
-        system_instruction = """
+        system_instruction = f"""
         You are a helpful virtual assistant to Kabarak University.
         Rasa has identified an intent 'bot_challenge' which handles queries related to who you are and what you can do.
         Respond to the user's prompt appropriately.
         
-        **EXAMPLE:** {
+        **EXAMPLE:** {{
             'user': 'Are you an AI?',
             'bot': 'Yes. I am powered by AI tools to provide the most accurate response' 
-        }
+        }}
+        
+        **Last 5 chats:** {last_5_chats(tracker)}
         
         **RESPONSIBILITIES**
         - Give brief introduction to the university
@@ -39,6 +42,7 @@ class ActionRespondBotInquiry(Action):
         4. Emojis are optional
         5. You can redirect them to the offices and contacts
         6. Don't invent your own data or use from the web 
+        7. Follow basic conversation logic based on the last 5 chats if provided
         """
 
         response = generate_response(system_instruction, user_prompt)
