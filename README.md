@@ -82,7 +82,7 @@ export GEMINI_API_KEY=api_key#API key from https://aistudio.google.com
    
 8. **Start the frontend**
     ```shell
-    serve -s dist -p 3000
+    npm run dev
     ```
    
 9. **In your browser, visit https://localhost:3000**
