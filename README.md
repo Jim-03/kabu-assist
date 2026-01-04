@@ -85,7 +85,7 @@ export GEMINI_API_KEY=api_key#API key from https://aistudio.google.com
     npm run dev
     ```
    
-9. **In your browser, visit https://localhost:3000**
+9. **In your browser, visit https://localhost:5173**
 
 ## Sample Interactions
 
