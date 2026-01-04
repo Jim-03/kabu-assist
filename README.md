@@ -86,6 +86,13 @@ export GEMINI_API_KEY=api_key#API key from https://aistudio.google.com
     ```
    
 9. **In your browser, visit https://localhost:5173**
+The interface will be located at the far bottom right
+
+![image](docs/icon.png)
+
+This will launch the following chat interface:
+
+![chat](docs/chat.png)
 
 ## Sample Interactions
 
