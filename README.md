@@ -48,33 +48,44 @@ queries and provide instant, consistent responses.
     ```shell
    ./setup.sh # .\setup.ps1
     ```
-3. **Export the environment variables**
+
+3. **Create a `.env` file containing the following:
+
+```dotenv
+export DB_HOST=localhost# db host
+export DB_PORT=5432# port number
+export DB_NAME=chats# the name of the database to store chats
+export DB_USER=username# Your db username
+export DB_PASS=password#The password to your database
+export GEMINI_API_KEY=api_key#API key from https://aistudio.google.com
+```
+4. **Export the environment variables**
     ```shell
     source .env
     ```
    
-4. **Activate the virtual environment(if not activated)**
+5. **Activate the virtual environment(if not activated)**
     ```shell
    cd chatbot-core
     source .venv/bin/activate  # source .venv\Scripts\Activate.ps1
     ```
 
-5. **Start the server**
+6. **Start the server**
     ```shell
     rasa run --enable-api --cors "*"
     ```
-   
-6. **Start the actions server in a separate (activated) terminal**
+
+7. **Start the actions server in a separate (activated) terminal**
    ```shell
     rasa run actions
     ```
    
-7. **Start the frontend**
+8. **Start the frontend**
     ```shell
     serve -s dist -p 3000
     ```
    
-8. **In your browser, visit https://localhost:3000**
+9. **In your browser, visit https://localhost:3000**
 
 ## Sample Interactions
 
